@@ -15,7 +15,7 @@ namespace FortuneTeller
 
             Console.WriteLine("Please press enter to begin.");
 
-            Console.ReadKey(); 
+            Console.ReadKey();
 
             Console.WriteLine("Please tell me your first name.");
             string userFirst = Console.ReadLine();
@@ -29,13 +29,22 @@ namespace FortuneTeller
             Console.WriteLine("In what numerical month were you born?");
             int userBMonth = int.Parse(Console.ReadLine());
 
+
             Console.WriteLine("What is your favorite ROYGBIV color? Enter \"Help\" for color repository.");
             string userColor = Console.ReadLine().ToLower();
-             
-            if (userColor == "Help")
+
+            if (userColor == "help")
             {
-                Console.WriteLine("Orange");
+                Console.WriteLine("Red \n Orange \n Yellow \n Green \n Blue \n Indigo \n Violet");
+
+                Console.WriteLine("What is your favorite ROYGBIV color? Enter \"Help\" for color repository.");
+                userColor = Console.ReadLine().ToLower();
             }
+            else
+            {
+                Console.WriteLine("");
+            }
+
 
             Console.WriteLine("How many sibilings do you have?");
             int userSib = int.Parse(Console.ReadLine());
@@ -88,7 +97,7 @@ namespace FortuneTeller
 
             if (userColor == "red")
             {
-                transport = "transportation gun";
+                transport = "a transportation gun";
             }
             else if (userColor == "orange")
             {
@@ -96,7 +105,7 @@ namespace FortuneTeller
             }
             else if (userColor == "yellow")
             {
-                transport = "a pogo stick"; 
+                transport = "a pogo stick";
             }
             else if (userColor == "green")
             {
@@ -114,13 +123,13 @@ namespace FortuneTeller
             {
                 transport = "a unicycle, complete with a dancing monkey wearing a hat";
             }
-            
+
 
             string dollaBillz = "";
 
             if (userBMonth == 1 || userBMonth == 2 || userBMonth == 3 || userBMonth == 4)
             {
-               dollaBillz = "$150,000"; 
+                dollaBillz = "$150,000";
             }
             else if (userBMonth == 5 || userBMonth == 6 || userBMonth == 7 || userBMonth == 8)
             {
@@ -136,7 +145,7 @@ namespace FortuneTeller
             }
 
             Console.WriteLine(userFirst + " " + userLast + " will retire in " + retYear + " with " + dollaBillz + " in the bank, a vacation" + "\n" + "home in " + vacaHome + " and " + transport + ".");
-            
+
         }
     }
 }
